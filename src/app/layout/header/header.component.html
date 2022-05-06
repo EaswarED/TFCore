@@ -1,0 +1,252 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between" id="mainNav">
+    
+    <a class="navbar-brand" href=""><img src="./assets/img/Logo.png"/></a>
+
+
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="dropdown users">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+            Admin		
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right account_user" role="menu">
+              <li class="dropdown-header">Adminitrator</li>
+              <li class="dropdown-divider"></li>
+							<li class="dropdown-header"><a href="#"><i class="fa fa-address-card-o"></i>My Profile</a></li>
+							<li class="dropdown-header"><a href="#"><i class="fa fa-cogs"></i>Performance</a></li>
+							<li class="dropdown-header"><a href="#"><i class="fa fa-question-circle-o"></i>Help</a></li>
+							<li class="dropdown-divider"></li>
+							<li class="dropdown-header"><i class="pi pi-sign-out"></i><a href="#">Logout</a></li>
+						</ul>
+					</li>
+        
+      </ul>
+  </nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="">
+            <nav class="navbar navbar-light navbar-expand-sm px-0 flex-row flex-nowrap sidebar_header">
+              <div class="nav flex-sm-column flex-row">
+                <p-button type="button" (click)="visibleSidebar1 = true" icon="pi pi-bars" class="bars_button"></p-button>
+                <ul class="menu-list">
+                  
+                  <li class="nav-item dropdown flag-list">
+                    <p-button class="flag mr-lg-2" icon="pi pi-search"  (click)="opss.toggle($event)"></p-button>
+          
+                    <p-overlayPanel #opss [showCloseIcon]="true" >
+                        <ng-template pTemplate>
+                          <strong>Search Item</strong>
+                          <div class="p-inputgroup">
+                            <button type="button" pButton pRipple icon="pi pi-search" styleClass="p-button-success"></button>    
+                            <input type="text" class="form-control mr-sm-2" pInputText placeholder="Search...">       
+                        </div>
+                        <p-autoComplete [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
+                        </ng-template>
+                    </p-overlayPanel>
+                    
+                  </li>
+                  <li class="nav-item dropdown notification-list list-add">
+                    <p-button class="notification mr-lg-2" icon="fa fa-plus"  (click)="opa.toggle($event)"></p-button>
+          
+                    <p-overlayPanel #opa [showCloseIcon]="true" >
+                        <ng-template pTemplate>
+                          <strong>Add</strong>
+                          <div class="dropdown-divider"></div>
+                          <ul class="add_list">
+                            <li><a><i class="pi pi-fw pi-users"></i>Candidate</a></li>
+                            <li><a><i class="pi pi-fw pi-briefcase"></i>Jobs</a></li>
+                            <li><a><i class="fa fa-building-o"></i>Company</a></li>
+                            <li><a><i class="pi pi-fw pi-mobile"></i>Contact</a></li>
+                            <li><a><i class="pi pi-fw pi-shopping-cart"></i>Opportunity</a></li>
+                            <li><a><i class="fa fa-life-saver"></i>Helpdesk</a></li>
+                          </ul>
+                          
+                        </ng-template>
+                    </p-overlayPanel>
+                    
+                  </li>
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link mr-lg-2" id="messagesDropdown" href="#" >
+                      <i class="fa fa-check-square-o"></i>
+                      
+                    </a>
+                  </li> -->
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link mr-lg-2" id="messagesDropdown" href="#" >
+                      <i class="fa fa-tasks"></i>
+                      
+                    </a>
+                  </li> -->
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-comments-o"></i>
+                      
+                    </a>
+                  </li> -->
+                  
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link mr-lg-2" id="messagesDropdown" href="#">
+                      <i class="fa fa-male"></i>
+                      
+                    </a>
+                  </li> -->
+                  <li class="nav-item dropdown flag-list">
+                    <p-button class="flag mr-lg-2" icon="fa fa-check-square-o"  (click)="opc.toggle($event)"></p-button>
+          
+                    <p-overlayPanel #opc [showCloseIcon]="true" >
+                        <ng-template pTemplate>
+                          <strong>Approval</strong>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-danger">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item small" href="#">View all alerts</a>
+                          
+                        </ng-template>
+                    </p-overlayPanel>
+                    
+                  </li> 
+                  <li class="nav-item dropdown palette-list">
+                    <p-button class="palette mr-lg-2" icon="fa fa-comments-o"  (click)="ops.toggle($event)"></p-button>
+                    <p-overlayPanel #ops [showCloseIcon]="true" >
+                      <ng-template pTemplate>
+                        <strong>Interview</strong>
+                        <div class="p-grid">
+                          <div class="p-col-12 p-md-4"><div class="gray" [ngClass]="(storedTheme === 'theme-gray') ? 'active' : ''" (click)='setTheme("theme-gray")'></div></div>
+                           <div class="p-col-12 p-md-6 p-lg-4"><div class="black" [ngClass]="(storedTheme === 'theme-black') ? 'active' : ''" (click)='setTheme("theme-black")'></div></div>
+                          <div class="p-col-12 p-md-6 p-lg-4"><div class="orange" [ngClass]="(storedTheme === 'theme-orange') ? 'active' : ''" (click)='setTheme("theme-orange")'></div></div> 
+                          <div class="p-col-12 p-md-4"><div class="blue" [ngClass]="(storedTheme === 'theme-blue') ? 'active' : ''" (click)='setTheme("theme-blue")'></div></div>
+                           <div class="p-col-12 p-md-6 p-lg-4"><div class="green" [ngClass]="(storedTheme === 'theme-green') ? 'active' : ''" (click)='setTheme("theme-green")'></div></div>
+                          <div class="p-col-12 p-md-6 p-lg-4"><div class="brown" [ngClass]="(storedTheme === 'theme-brown') ? 'active' : ''" (click)='setTheme("theme-brown")'></div></div>
+                      </div>
+                      </ng-template>
+                  </p-overlayPanel>
+                  </li> 
+                   <li class="nav-item dropdown notification-list">
+                    <p-button class="notification mr-lg-2" icon="fa fa-tasks"  (click)="op.toggle($event)"></p-button>
+          
+                    <p-overlayPanel #op [showCloseIcon]="true" >
+                        <ng-template pTemplate>
+                          <strong>Tasks</strong>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-danger">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                              <strong>Status Update</strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.This is an automated server response message. All systems are online.</div>
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item small" href="#">View all alerts</a>
+                        </ng-template>
+                    </p-overlayPanel>
+                  </li> 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link  mr-lg-2" id="messagesDropdown" href="#" >
+                      <i class="pi pi-cog"></i>
+                      <!-- <span class="d-lg-none">Setting</span> -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+        <div class="col py-2 content_tab">
+            
+<p-tabView>
+  <p-tabPanel header="Candidate List" leftIcon="pi pi-users" headerstyleClass="can_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Tickets" leftIcon="fa fa-life-saver" headerstyleClass="help_tab" [closable]="true">
+    
+  </p-tabPanel>
+  
+  <p-tabPanel header="Sales" leftIcon="pi pi-shopping-cart" class="admin_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="User system" leftIcon="fa fa-adn" class="boa_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Contact" leftIcon="pi pi-mobile" class="sale_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Dashboard" leftIcon="fa fa-dashboard" class="app_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Job List" leftIcon="pi pi-briefcase" class="job_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Reports" leftIcon="fa fa-stack-overflow" class="contact_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Application Offer" leftIcon="fa fa-gift" class="dash_tab" [closable]="true">
+    
+  </p-tabPanel>
+  <p-tabPanel header="Company" leftIcon="fa fa-building-o" class="com_tab" [closable]="true">
+    
+    
+  </p-tabPanel>
+  
+</p-tabView>
+
+        </div>
+    </div>
+</div>
+  <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+      <div class="sidebar_center">
+    
+    <!-- <p-panelMenu [transitionOptions]="'0ms'" [model]="items" (click) = "activeMenu($event)"></p-panelMenu> -->
+    
+    <p-slideMenu [model]="items" (click) = "activeMenu($event)"></p-slideMenu>
+
+    
+</div>
+</p-sidebar>
+<p-dialog header="Add" [(visible)]="display" styleClass="mydialog" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+[draggable]="false" [resizable]="false">
+  <ul>
+    <li><a><i class="pi pi-fw pi-users"></i>Candidate</a></li>
+    <li><a><i class="pi pi-fw pi-briefcase"></i>Jobs</a></li>
+    <li><a><i class="fa fa-building-o"></i>Company</a></li>
+    <li><a><i class="pi pi-fw pi-mobile"></i>Contact</a></li>
+    <li><a><i class="fa fa-trophy"></i>Placement</a></li>
+    <li><a><i class="fa fa-life-saver"></i>Support</a></li>
+  </ul>
+</p-dialog>

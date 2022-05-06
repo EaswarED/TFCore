@@ -1,0 +1,54 @@
+.navbar-brand img{
+    width: 100%;
+    max-width: 200px;
+}
+.dropdown-toggle{
+    display: inline-flex;
+}
+
+#messagesDropdown.dropdown-toggle::after,
+#alertsDropdown.dropdown-toggle::after{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.dropdown-item{
+    white-space: normal;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+@media only screen and (max-device-width: 892px) {
+    .navbar-light .navbar-nav .nav-link{
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    .theme-orange #messagesDropdown span,
+    .theme-orange #alertsDropdown span{
+        color: var(--white) !important;
+    }
+    .theme-black #messagesDropdown span,
+    .theme-black #alertsDropdown span{
+        color: var(--orange_darkorange) !important;
+    }
+    .theme-gray .dropdown-toggle{
+        color: var(--black) !important;
+    }
+    #messagesDropdown.dropdown-toggle::after, #alertsDropdown.dropdown-toggle::after,
+    .users .dropdown-toggle::after{
+        float:right;
+    }
+    #messagesDropdown.dropdown-toggle,
+    #alertsDropdown.dropdown-toggle{
+        text-align: left;
+        display: block;
+        width: 100%;
+        
+        span.d-lg-none{
+            margin-left:10px;
+            margin-right:10px;
+        }
+    }
+
+  }
