@@ -1,0 +1,8 @@
+<div class="container switcher-theme">
+
+    <div class="p-grid">
+        <div class="p-col-12 p-md-6 p-lg-4"><div class="gray" [ngClass]="(storedTheme === 'theme-gray') ? 'active' : ''" (click)='setTheme("theme-gray")'></div></div>
+        <div class="p-col-12 p-md-6 p-lg-4"><div class="orange" [ngClass]="(storedTheme === 'theme-black') ? 'active' : ''" (click)='setTheme("theme-black")'></div></div>
+        <div class="p-col-12 p-md-6 p-lg-4"><div class="black" [ngClass]="(storedTheme === 'theme-orange') ? 'active' : ''" (click)='setTheme("theme-orange")'></div></div>
+    </div>
+</div>
